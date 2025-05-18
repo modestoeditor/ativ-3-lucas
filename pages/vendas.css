@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+      --primaria: #0066FF;
+      --secundaria: #EB914B;
+      --background: #131313;
+      --letra: #d9d9d9
+  }
+  
+  body {
+      background-color: var(--background);
+      color: var(--letra);
+  }
+  
+  .navegacao {
+      position: fixed;
+      top: 0;
+      background: var(--primaria);
+      width: 100%;
+      z-index: 100;
+      padding: 1.5rem;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--letra);
+    font-weight: 750;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--secundaria);
+}
+
+.menu-link:hover::after{
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+header{
+    margin-top: 90px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.livro {
+    padding: 6rem 2rem;
+}
+
+.compras-livro {
+    background: var(--primaria);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    border: 2px solid var(--secundaria);
+    overflow: hidden; 
+    color: var(--letra);
+    text-align: center;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.compras-livro:hover {
+    box-shadow: #ff51004d 0px 19px 38px, #ff51004d 0px 15px 12px;
+    cursor: pointer;
+    transform: translateY(-10px) scale(1.03);
+}
+
+.caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proj-imagens {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    color: #131313;
+    background: var(--secundaria);
+}

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+      --primaria: #0066FF;
+      --secundaria: #EB914B;
+      --background: #131313;
+      --letra: #d9d9d9
+  }
+  
+  body {
+      background-color: var(--background);
+      color: var(--letra);
+  }
+  
+  .navegacao {
+      position: fixed;
+      top: 0;
+      background: var(--primaria);
+      width: 100%;
+      z-index: 100;
+      padding: 1.5rem;
+  }
+  
+  .menu{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 3rem;
+  }
+  
+  .menu-link{
+      text-decoration: none;
+      color: var(--letra);
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+  }
+  
+  .menu-link::after{
+      content: '';
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: var(--secundaria);
+  }
+  
+  .menu-link:hover::after{
+      width: 100%;
+      transition: 0.5s ease;
+  }
+  
+  .inicio {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .logo {
+      width: 1000px;
+      height: 500px;
+  }
+  
+  .nada{
+      font-size: 2rem;
+      color: var(--letra);
+      margin: 10px;
+  }
+  
+  .sobre{
+      padding: 6rem 2rem;
+  }
+  
+  .titulo{
+      font-size: 3rem;
+      color: var(--letra);
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  .sobre_box{
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 20px;
+      border: 1px solid var(--secundaria);
+      backdrop-filter: blur(30px);
+      background: rgb(43, 43, 43);
+  }
+  
+  .bio{
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+  }
+  
+  .slogan {
+      text-align: center;
+      font-size: 1.2rem;
+  }
+
+  .politicas{
+    padding: 6rem 2rem;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    color: #131313;
+    background: var(--secundaria);
+}
